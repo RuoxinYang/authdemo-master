@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1> Superhero</h1>
+    <h2> These are the heros</h2>
+
+      <form method="post" action="/superhero">
+          <input type="text" name="name">Name<br>
+          <input type="text" name="ability">Ability<br>
+          <input type="number" name="age">Age<br>
+          <input type="submit" value="Creat!">
+      </form>
+
+
+      <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Ability</th>
+                  <th>age</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% superheros.forEach(superhero => { %>
+                    <tr>
+                      <td><%= superhero.name %></td>
+                      <td><%= superhero.ability %></td>
+                      <td><%= superhero.age%></td>
+                      </tr>
+              <% }) %>
+              </tbody>
+              </table>
+  </div>
